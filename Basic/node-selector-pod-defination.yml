@@ -1,0 +1,17 @@
+apiVersion: v1
+
+kind: Pod
+
+metadata:
+        name: node-selector-pod
+        labels:
+                name: nodeselector
+                type: running-o-a2179285-09m7
+
+spec:
+        containers:
+              - name: node-selector-tomcat
+                image: tomcat
+
+        nodeSelector:
+                type: frontend
